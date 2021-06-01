@@ -1,0 +1,11 @@
+# mac
+.DS_Store
+
+# build
+dist/
+.cache/
+.env
+
+# npm
+node_modules/
+yarn-error.log

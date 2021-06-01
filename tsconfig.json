@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "jsx": "preserve",
+    "lib": ["dom", "ES2020"],
+    "noFallthroughCasesInSwitch": true,
+    "strict": true,
+    "types": ["node", "@emotion/react/types/css-prop"]
+  },
+  "include": ["src/**/*"],
+  "exclude": ["src/**/*.test.*"]
+}
