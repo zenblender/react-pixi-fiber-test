@@ -39,12 +39,11 @@
     "@pixi/math": "^5.3.7",
     "@pixi/settings": "^5.3.7",
     "@pixi/utils": "^5.3.7",
-    "color": "^3.1.3",
     "pixi-filters": "^3.2.2",
     "pixi.js": "^5.3.7",
     "react": ">=17.0.2",
     "react-dom": "^17.0.2",
-    "react-pixi-fiber": "^0.14.3"
+    "react-pixi-fiber": "https://pkg.csb.dev/michalochman/react-pixi-fiber/commit/6865cfdd/react-pixi-fiber"
   },
   "babel": {
     "plugins": [

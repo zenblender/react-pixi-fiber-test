@@ -1,7 +1,7 @@
-import { css } from '@emotion/react'
 import * as React from 'react'
+import { useEffect } from 'react'
 import { FC, useCallback } from 'react'
-import { createStageClass } from 'react-pixi-fiber'
+import { createStageClass, usePixiApp } from 'react-pixi-fiber'
 
 import { CanvasBackground } from './canvasBackground'
 
@@ -11,13 +11,21 @@ export const ReactPixiFiberStage: FC = () => {
   const w = 300
   const h = 200
 
-  const stageRef = useCallback((stage) => {
-    // do stuff
+  const app = usePixiApp()
+
+  const animate = useCallback(() => {
+    console.log('animation frame')
   }, [])
+
+  useEffect(() => {
+    app.ticker.add(animate)
+    return function cleanup() {
+      app.ticker.remove(animate)
+    }
+  }, [animate, app.ticker])
 
   return (
     <Stage
-      ref={stageRef}
       options={{
         autoStart: true,
         backgroundColor: 0,
@@ -28,11 +36,6 @@ export const ReactPixiFiberStage: FC = () => {
         transparent: true,
         antialias: true
       }}
-      css={css`
-        position: absolute;
-        left: 0;
-        top: 0;
-      `}
     >
       <CanvasBackground />
     </Stage>
