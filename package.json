@@ -13,8 +13,8 @@
     "@babel/preset-react": "^7.12.13",
     "@babel/preset-typescript": "^7.13.0",
     "@types/node": "^15.6.1",
-    "@types/react": "^16.8",
-    "@types/react-dom": "^16.8",
+    "@types/react": "^17",
+    "@types/react-dom": "^17",
     "@typescript-eslint/eslint-plugin": "^4.25.0",
     "@typescript-eslint/parser": "^4.25.0",
     "babel-plugin-emotion": "^11.0.0",
@@ -41,9 +41,9 @@
     "@pixi/utils": "^5.3.7",
     "pixi-filters": "^3.2.2",
     "pixi.js": "^5.3.7",
-    "react": "^16.8",
-    "react-dom": "^16.8",
-    "react-pixi-fiber": "^0.14.3"
+    "react": "^17",
+    "react-dom": "^17",
+    "react-pixi-fiber": "https://pkg.csb.dev/michalochman/react-pixi-fiber/commit/6865cfdd/react-pixi-fiber"
   },
   "babel": {
     "plugins": [
