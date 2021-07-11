@@ -4,7 +4,9 @@ import * as ReactDOM from 'react-dom'
 import { ReactPixiFiberStage } from './reactPixiFiberStage'
 
 function initReact() {
-  ReactDOM.render(<ReactPixiFiberStage />, document.querySelector('.app'))
+  const container = document.createElement('div')
+  document.body.appendChild(container)
+  ReactDOM.render(<ReactPixiFiberStage />, container)
 }
 
 initReact()

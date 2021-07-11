@@ -1,8 +1,8 @@
 import * as React from 'react'
-import { useEffect } from 'react'
-import { FC, useCallback } from 'react'
-import { createStageClass, usePixiApp } from 'react-pixi-fiber'
+import { FC } from 'react'
+import { createStageClass } from 'react-pixi-fiber'
 
+import { AnimationWrapper } from './animationWrapper'
 import { CanvasBackground } from './canvasBackground'
 
 const Stage = createStageClass()
@@ -10,19 +10,6 @@ const Stage = createStageClass()
 export const ReactPixiFiberStage: FC = () => {
   const w = 300
   const h = 200
-
-  const app = usePixiApp()
-
-  const animate = useCallback(() => {
-    console.log('animation frame')
-  }, [])
-
-  useEffect(() => {
-    app.ticker.add(animate)
-    return function cleanup() {
-      app.ticker.remove(animate)
-    }
-  }, [animate, app.ticker])
 
   return (
     <Stage
@@ -38,6 +25,7 @@ export const ReactPixiFiberStage: FC = () => {
       }}
     >
       <CanvasBackground />
+      <AnimationWrapper />
     </Stage>
   )
 }
